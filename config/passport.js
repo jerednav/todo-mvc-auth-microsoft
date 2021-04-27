@@ -1,4 +1,4 @@
-//Made from the Azure directory
+//Made from the Azure directory instructions
 
 const OIDCStrategy = require('passport-azure-ad').OIDCStrategy
 const mongoose = require('mongoose')
@@ -35,12 +35,12 @@ module.exports = function (passport) {
         }
 
         try {
-          let user = await User.findOne({ microsoftId: profile.oid })
+          let user = await User.findOne({ microsoftId: profile.oid }) //finding existing microsoft ID's
 
-          if (user) {
+          if (user) { //finish if the user is foud
             done(null, user)
           } else {
-            user = await User.create(newUser)
+            user = await User.create(newUser) //create a new user if no user is found
             done(null, user)
           }
         } catch (err) {
