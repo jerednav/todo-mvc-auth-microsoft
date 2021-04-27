@@ -1,10 +1,11 @@
-const express = require('express')
+const express = require('express') //help build out API
 const app = express()
-const mongoose = require('mongoose')
-const passport = require('passport')
-const session = require('express-session')
+const mongoose = require('mongoose') //build out models and talking to database
+const passport = require('passport') //comes with a nice strategy we can use to tal to Microsoft
+identity platform
+const session = require('express-session') //to stay logged in
 const MongoStore = require('connect-mongo')(session)
-const connectDB = require('./config/database')
+const connectDB = require('./config/database') //access database through config folder
 const authRoutes = require('./routes/auth')
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
