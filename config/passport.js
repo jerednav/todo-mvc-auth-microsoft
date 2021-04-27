@@ -1,3 +1,5 @@
+//Made from the Azure directory
+
 const OIDCStrategy = require('passport-azure-ad').OIDCStrategy
 const mongoose = require('mongoose')
 const config = require('../config/config')
