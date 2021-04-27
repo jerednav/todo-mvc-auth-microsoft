@@ -30,7 +30,8 @@ module.exports = function (passport) {
       async (accessToken, refreshToken, profile, done) => {
         console.log('auth: ', profile)
         const newUser = {
-          microsoftId: profile.oid,
+          microsoftId: profile.oid, //can change newUser name, just make sure it matches the schema
+          //found in models/User, const UserSchema
           displayName: profile.displayName,
         }
 
