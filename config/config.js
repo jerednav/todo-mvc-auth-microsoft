@@ -1,7 +1,9 @@
+//only things needed to change is the clientID and the port number if you changed it
+
 exports.creds = {
     identityMetadata: 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration', 
 
-    clientID: '<add your own>',
+    clientID: '<add your own>', //how microsoft knows what application is making the request
   
     clientSecret: '<add your own>', 
   
