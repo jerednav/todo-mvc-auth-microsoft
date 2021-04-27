@@ -3,7 +3,7 @@
 const OIDCStrategy = require('passport-azure-ad').OIDCStrategy
 const mongoose = require('mongoose')
 const config = require('../config/config') //has all secret info on it
-const User = require('../models/User')
+const User = require('../models/User') //hold our model that holds info for the user
 
 module.exports = function (passport) {
   passport.use(
