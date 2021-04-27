@@ -4,7 +4,7 @@ const config = require('../config/config')
 const router = express.Router()
 
 
-router.get('/login',
+router.get('/login', //handles log in request
   function(req, res, next) {
     passport.authenticate('azuread-openidconnect', 
       { 
@@ -17,7 +17,7 @@ router.get('/login',
   },
   function(req, res) {
     console.log('Login was called in the Sample');
-    res.redirect('/todos');
+    res.redirect('/todos'); //when it's done, it will send us to todos
 });
 
 router.get('/openid/return',
@@ -49,7 +49,7 @@ router.post('/openid/return',
   });
 
 
-router.get('/logout', function(req, res){
+router.get('/logout', function(req, res){ //will log the session out and will exterminate it
   req.session.destroy(function(err) {
     req.logOut();
     res.redirect(config.destroySessionUrl);
