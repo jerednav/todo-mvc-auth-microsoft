@@ -5,7 +5,8 @@ const passport = require('passport') //comes with a nice strategy we can use to 
 identity platform
 const session = require('express-session') //to stay logged in
 const MongoStore = require('connect-mongo')(session)
-const connectDB = require('./config/database') //access database through config folder
+const connectDB = require('./config/database') //access database through config folder 
+//and we can use the callback function connectDB
 const authRoutes = require('./routes/auth')
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
