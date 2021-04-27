@@ -11,12 +11,12 @@ const authRoutes = require('./routes/auth')
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
 
-require('dotenv').config({path: './config/.env'})
+require('dotenv').config({path: './config/.env'}) //allowing us to use our .env file in the application
 
 // Passport config
 require('./config/passport')(passport)
 
-connectDB()
+connectDB() //callback function and telling it to run, which will connect us to our database
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
