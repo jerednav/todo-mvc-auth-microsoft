@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
   microsoftId: {
     type: String,
-    required: true,
+    required: true, //dont change unless you change it in the passport.js folder 
   },
   displayName: {
     type: String,
