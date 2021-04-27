@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 //connects to MongoDB through Mongooose
+//MongoDB = database
+//mongo atlas = hosting the database, create a new project
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.DB_STRING, {
